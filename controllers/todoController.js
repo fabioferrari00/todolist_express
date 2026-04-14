@@ -11,11 +11,21 @@ exports.getTodos = (req, res) => {
 //CREATE
 exports.createTodo = (req, res) => {
   const { title } = req.body;
-  db.query('INSERT INTO todos (title) VALUES (?)', [title], (err, result) => {
-    if (err) return res.status(500).json(err);
-    res.json({ id: result.insertId, title, status: 'todo' })
-  })
-}
+
+  db.query(
+    'INSERT INTO todos (title) VALUES (?)',
+    [title],
+    (err, result) => {
+      if (err) return res.status(500).json(err);
+
+      res.json({
+        id: result.insertId,
+        title,
+        status: 'todo',
+      });
+    }
+  );
+};
 
 //UPDATE
 exports.updateTodo = (req, res) => {
