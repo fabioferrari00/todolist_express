@@ -38,15 +38,6 @@ CREATE TABLE todos (
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
- ## 📂 Struttura
-
-backend/
-├── controllers/
-│   └── todoController.js
-├── routes/
-│   └── todos.js
-├── db.js
-└── server.js
 
 ## 🎯 Obiettivo
 
@@ -57,3 +48,12 @@ Allenare REST API design, CRUD SQL, debug backend e clean architecture Express.
 npm install
 npm run dev
 
+📂 Struttura
+
+backend/
+├── controllers/
+│   └── todoController.js
+├── routes/
+│   └── todos.js
+├── db.js
+└── server.js
