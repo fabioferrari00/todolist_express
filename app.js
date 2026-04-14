@@ -18,7 +18,7 @@ app.use(cors({ origin: process.env.FE_APP }))
 
 app.use(express.json());
 
-//definisco la rotta per i movies
+//definisco la rotta per la list
 app.use("/api/todos", todoRoutes);
 
 //dico al server di rimanere in ascolto
