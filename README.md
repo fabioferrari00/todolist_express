@@ -22,3 +22,37 @@ Backend REST API della ToDo List sviluppato con **Node.js + Express + MySQL**.
 ```bash
 npm install
 npm run dev
+
+Server:
+
+http://localhost:3000
+
+🔌 Endpoints
+
+GET    /api/todos
+POST   /api/todos
+PUT    /api/todos/:id
+DELETE /api/todos/:id
+
+🗄️ Database
+
+CREATE TABLE todos (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    title VARCHAR(255) NOT NULL,
+    status ENUM('todo', 'doing', 'done') DEFAULT 'todo',
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+📂 Struttura
+
+backend/
+├── controllers/
+│   └── todoController.js
+├── routes/
+│   └── todos.js
+├── db.js
+└── server.js
+
+🎯 Obiettivo
+
+Allenare REST API design, CRUD SQL, debug backend e clean architecture Express.
