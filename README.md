@@ -19,6 +19,6 @@ Backend REST API della ToDo List sviluppato con **Node.js + Express + MySQL**.
 - cors
 
 ## ▶️ Avvio
-```bash
+
 npm install
 npm run dev
