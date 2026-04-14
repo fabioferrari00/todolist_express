@@ -1,5 +1,4 @@
-```md
-## 🟢 Backend — Express / Node.js ToDo API
+# 🟢 Backend — Express / Node.js ToDo API
 
 Backend REST API della ToDo List sviluppato con **Node.js + Express + MySQL**.
 
@@ -17,8 +16,9 @@ Backend REST API della ToDo List sviluppato con **Node.js + Express + MySQL**.
 - MySQL2
 - dotenv
 - cors
+- nodemon
 
 ## ▶️ Avvio
-
+```bash
 npm install
 npm run dev
