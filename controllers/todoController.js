@@ -43,7 +43,7 @@ exports.updateTodo = (req, res) => {
 };
 
 //UPDATE STATUS
-exports.updateTodo = (req, res) => {
+exports.updateTodoStatus = (req, res) => {
   const { id } = req.params;
   const { status } = req.body;
 
