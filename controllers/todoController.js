@@ -30,11 +30,11 @@ exports.createTodo = (req, res) => {
 //UPDATE TASK
 exports.updateTodo = (req, res) => {
   const { id } = req.params;
-  const { title, status } = req.body;
+  const { title } = req.body;
 
   db.query(
-    'UPDATE todos SET title = ?, status = ? WHERE id = ?',
-    [title, status, id],
+    'UPDATE todos SET title = ? WHERE id = ?',
+    [title, id],
     (err) => {
       if (err) return res.status(500).json(err);
       res.json({ message: 'Task aggiornata' });
