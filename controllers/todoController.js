@@ -27,7 +27,22 @@ exports.createTodo = (req, res) => {
   );
 };
 
-//UPDATE
+//UPDATE TASK
+exports.updateTodo = (req, res) => {
+  const { id } = req.params;
+  const { title, status } = req.body;
+
+  db.query(
+    'UPDATE todos SET title = ?, status = ? WHERE id = ?',
+    [title, status, id],
+    (err) => {
+      if (err) return res.status(500).json(err);
+      res.json({ message: 'Task aggiornata' });
+    }
+  );
+};
+
+//UPDATE STATUS
 exports.updateTodo = (req, res) => {
   const { id } = req.params;
   const { status } = req.body;
